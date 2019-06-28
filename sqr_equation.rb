@@ -25,4 +25,4 @@ elsif (d == 0)
 
 else
 	puts "Корней нет"
-end
+end 
