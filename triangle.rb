@@ -1,41 +1,36 @@
 puts "Введите длины сторон треугольника"
 
 puts "Сторона А: "
-a = gets.to_i
+side_a = gets.to_i
 
 puts "Сторона B: "
-b = gets.to_i
+side_b = gets.to_i
 
 puts "Сторона C: "
-c = gets.to_i
+side_c = gets.to_i
 
-if ((a**2)==(b**2+c**2))
-    puts "Сторона А является гипотенузой"
-    puts "Треугольник прямоугольный"
-    if b == c
-        puts "и равнобедренный"
-    end
-
-elsif ((b**2)==(a**2+c**2))
-    puts "Сторона B является гипотенузой"
-    puts "Треугольник прямоугольный"
-    if a == c
-        puts "и равнобедренный"
-    end
-
-elsif ((c**2)==(a**2+b**2))
-    puts "Сторона С является гипотенузой"
-    puts "Треугольник прямоугольный"
-    if a == b
-        puts "и равнобедренный"
-    end
-
-elsif ((a == b) && (a == c) && (b == c))
-    puts "Треугольник равносторонний"
-
-elsif
-    ((a == b) || (a == c) || (b == c))
-    puts "Треугольник равнобедренный"
+if side_a**2 == side_b**2 + side_c**2
+  puts "Сторона А является гипотенузой"
+  puts "Треугольник прямоугольный"
+  if side_b == side_c
+     puts "и равнобедренный"
+  end
+elsif side_b**2 == side_a**2 + side_c**2
+  puts "Сторона B является гипотенузой"
+  puts "Треугольник прямоугольный"
+  if side_a == side_c
+    puts "и равнобедренный"
+  end
+elsif c**2 == a**2 + b**2
+  puts "Сторона С является гипотенузой"
+  puts "Треугольник прямоугольный"
+  if side_a == side_b
+    puts "и равнобедренный"
+  end
+elsif (side_a == side_b) && (side_a == side_c) && (side_b == side_c)
+  puts "Треугольник равносторонний"
+elsif (side_a == side_b) || (side_a == side_c) || (side_b == side_c)
+  puts "Треугольник равнобедренный"
 else
-    puts "Треугольник разносторонний"
+  puts "Треугольник разносторонний"
 end

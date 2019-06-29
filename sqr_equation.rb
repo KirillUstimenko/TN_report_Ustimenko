@@ -1,28 +1,27 @@
 puts "Введите 3 коэффициента"
 
 puts "Коэффициент А: "
-a = gets.to_f
+coefficient_a = gets.to_f
 
 puts "Коэффициент B: "
-b = gets.to_f
+coefficient_b = gets.to_f
 
 puts "Коэффициент C: "
-c = gets.to_f
+coefficient_c = gets.to_f
 
-d = b**2 - 4*a*c
+discriminant = coefficient_b**2 - 4 * coefficient_a * coefficient_c
 
-puts "Дискриминант = #{d}"
+puts "Дискриминант = #{discriminant}"
 
-if (d > 0)
-	x1 = (-b + Math.sqrt(d)) / (2*a)
-	x2 = (-b - Math.sqrt(d)) / (2*a)
-	puts "Корень x1 = #{x1}"
-	puts "Корень x2 = #{x2}"
-
-elsif (d == 0) 
-	x = (-b) / (2*a)
-	puts "Корень x = #{x}"
-
+if discriminant > 0
+  discriminant_root = Math.sqrt(discriminant)
+	radix_x1 = (-coefficient_b + discriminant_root)/(2 * coefficient_a)
+	radix_x2 = (-coefficient_b - discriminant_root)/(2 * coefficient_a)
+	puts "Корень x1 = #{radix_x1}"
+	puts "Корень x2 = #{radix_x2}"
+elsif discriminant == 0
+	radix_x = (-coefficient_b)/(2 * coefficient_a)
+	puts "Корень x = #{radix_x}"
 else
 	puts "Корней нет"
-end 
+end

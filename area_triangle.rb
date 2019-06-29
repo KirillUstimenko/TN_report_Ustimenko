@@ -1,9 +1,9 @@
 puts "Укажите длину основания треугольника (см.): "
-a_triangle = gets.to_i
+side_a = gets.to_i
 
 puts "Укажите высоту треугольника (см.): "
-h_triangle = gets.to_i
+side_h = gets.to_i
 
-s_triangle = (a_triangle*h_triangle)/2
+square_triangle = (a_triangle * h_triangle)/2
 
-puts "Площадь треугольника составляет: #{s_triangle} см^2"
+puts "Площадь треугольника составляет: #{square_triangle} см^2"
