@@ -50,20 +50,16 @@ side_a, side_b, side_c = [side_a, side_b, side_c].sort
 стороны не равны ГИПОТИНУЗЕ
 =end
 
-if  side_a != 0 || side_b == 0 || side_c == 0 #узнаем нет ли в треугольнике стороны равной нулю
-  if (side_c > side_a && side_c > side_b) && (side_c**2 == side_a**2 + side_b**2)
-    puts "Треугольник прямоугольный"
-    if side_a == side_b
-      puts "и равнобедренный"
-    end
-  elsif side_c == side_a || side_c == side_b || side_a == side_b
-    puts "Треугольник равнобедренный"
-    if side_c == side_a && side_c == side_b && side_a == side_b
-      puts "и равносторонний"
-    end
-  else 
-    puts "Треугольник разносторонний"
+if (side_c > side_a && side_c > side_b) && (side_c**2 == side_a**2 + side_b**2)
+  puts "Треугольник прямоугольный"
+  if side_a == side_b
+    puts "и равнобедренный"
   end
-else
-  puts "Вы ввели длины сторон, соответствующие прямой линии, а не треугольнику. Перезапустите программу"
+elsif side_c == side_a || side_c == side_b || side_a == side_b
+  puts "Треугольник равнобедренный"
+  if side_c == side_a && side_c == side_b && side_a == side_b
+    puts "и равносторонний"
+  end
+else 
+  puts "Треугольник разносторонний"
 end
